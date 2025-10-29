@@ -1,0 +1,553 @@
+{
+  "evaluation_summary": {
+    "total_images_evaluated": 5,
+    "total_evaluations": 10,
+    "successful_evaluations": 9,
+    "winner": "qwen2:7b",
+    "winner_score": 1.2
+  },
+  "model_comparison": {
+    "model1": {
+      "model_name": "gemma3:4b-it-qat",
+      "count": 5,
+      "successful_evaluations": 4,
+      "average_overall_score": 1.15,
+      "average_criteria_scores": {
+        "element_detection": 1.25,
+        "structural_accuracy": 0.25,
+        "layout_accuracy": 0.25,
+        "code_quality": 3.25,
+        "completeness": 0.5
+      }
+    },
+    "model2": {
+      "model_name": "qwen2:7b",
+      "count": 5,
+      "successful_evaluations": 5,
+      "average_overall_score": 1.2,
+      "average_criteria_scores": {
+        "element_detection": 1.2,
+        "structural_accuracy": 0.2,
+        "layout_accuracy": 0.2,
+        "code_quality": 3.8,
+        "completeness": 0.2
+      }
+    }
+  },
+  "model_strengths": {
+    "gemma3:4b-it-qat": [
+      "completeness: 0.5 vs 0.2"
+    ],
+    "qwen2:7b": [
+      "code_quality: 3.8 vs 3.25"
+    ]
+  },
+  "recommendations": [
+    "Both models show comparable results",
+    "Model selection may depend on specific requirements"
+  ],
+  "raw_evaluation_data": {
+    "evaluation_summary": {
+      "total_evaluations": 10,
+      "successful_evaluations": 10,
+      "failed_evaluations": 0,
+      "model1_summary": {
+        "average_overall_score": 0.92,
+        "average_criteria_scores": {
+          "element_detection": 1.0,
+          "structural_accuracy": 0.2,
+          "layout_accuracy": 0.2,
+          "code_quality": 2.8,
+          "completeness": 0.4
+        },
+        "count": 5
+      },
+      "model2_summary": {
+        "average_overall_score": 1.2,
+        "average_criteria_scores": {
+          "element_detection": 1.2,
+          "structural_accuracy": 0.2,
+          "layout_accuracy": 0.2,
+          "code_quality": 3.8,
+          "completeness": 0.2
+        },
+        "count": 5
+      },
+      "overall_summary": {
+        "average_overall_score": 1.06,
+        "average_criteria_scores": {
+          "element_detection": 1.1,
+          "structural_accuracy": 0.2,
+          "layout_accuracy": 0.2,
+          "code_quality": 3.3,
+          "completeness": 0.3
+        },
+        "count": 10
+      }
+    },
+    "detailed_results": [
+      {
+        "element_detection": {
+          "score": 1,
+          "explanation": "The generated code contains generic website elements (header, nav, hero, features, pricing) that do not match the screenshot at all. The screenshot shows a vehicle tracking dashboard with circular progress indicators, statistics tabs, and a line graph. None of these specific elements are present in the generated code."
+        },
+        "structural_accuracy": {
+          "score": 0,
+          "explanation": "The structure is completely wrong. The screenshot shows a mobile app with a navigation bar at top, three tabs (Statistics, Locations, Reports), two circular progress indicators, and a chart below. The generated code shows a typical website structure with header, hero section, features grid, and pricing table - none of which match the original UI."
+        },
+        "layout_accuracy": {
+          "score": 0,
+          "explanation": "The layout doesn't match at all. The screenshot displays a vertical mobile layout with top navigation, tabs, circular metrics in a row, and a graph. The generated code suggests a multi-section website layout with horizontal navigation, hero banner, feature grid, and pricing table - completely different from the original."
+        },
+        "code_quality": {
+          "score": 4,
+          "explanation": "While the code is syntactically correct and follows basic React conventions with proper component structure and semantic HTML, it's generic boilerplate code that doesn't address the specific requirements of the screenshot. It lacks the necessary components for data visualization (circular progress, charts) that would be needed."
+        },
+        "completeness": {
+          "score": 0,
+          "explanation": "The implementation is 0% complete relative to the screenshot. It doesn't include any of the required elements: no status bar, no back button, no tabs, no circular progress indicators for KM/PKG metrics, no statistics display, and no line chart. It appears to be generic website template code."
+        },
+        "overall_score": 1,
+        "summary": "The generated code bears no resemblance to the vehicle tracking dashboard shown in the screenshot. It appears to be generic website boilerplate code with standard sections like hero, features, and pricing, while the screenshot shows a specific mobile app interface for vehicle statistics with circular progress indicators and charts. This is a complete mismatch.",
+        "strengths": [
+          "Code is syntactically correct",
+          "Follows basic React component structure",
+          "Uses semantic HTML elements"
+        ],
+        "weaknesses": [
+          "Completely wrong UI - shows generic website instead of vehicle dashboard",
+          "Missing all key components: circular progress indicators, statistics tabs, charts",
+          "No mobile app navigation structure (back button, status bar, add button)",
+          "Missing the 'Vehicle XOS' title and tab navigation",
+          "No data visualization components for the metrics shown",
+          "Doesn't reflect the dark blue color scheme of the original",
+          "Contains irrelevant sections like pricing and features grid"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_001.png",
+          "code_file_path": "output\\mobile_ui_001_model1.jsx",
+          "image_name": "mobile_ui_001.png",
+          "code_filename": "mobile_ui_001_model1.jsx",
+          "model_name": "Model 1"
+        }
+      },
+      {
+        "element_detection": {
+          "score": 2,
+          "explanation": "The generated code is completely missing the key UI elements from the screenshot: circular progress indicators showing '238 KM' and '6k PKG', the tab navigation (Statistics/Locations/Reports), the line chart at the bottom, and the proper header with 'Vehicle XOS' title. Instead, it contains generic placeholder elements like 'Title', 'Subtitle', and action buttons that don't exist in the original design."
+        },
+        "structural_accuracy": {
+          "score": 1,
+          "explanation": "The component structure is entirely wrong. The screenshot shows a vehicle tracking dashboard with tabs, circular statistics, and a chart, but the code implements a generic content page with title, subtitle, description, and action buttons. The hierarchy and nesting of components doesn't match at all."
+        },
+        "layout_accuracy": {
+          "score": 1,
+          "explanation": "The layout is completely different. The original has a gradient blue/purple background with a header, three tabs, two circular progress indicators side-by-side, and a line chart below. The generated code has a white background with vertically stacked elements (header button, centered content, action buttons, and footer) that bear no resemblance to the original layout."
+        },
+        "code_quality": {
+          "score": 6,
+          "explanation": "While the code itself is well-structured with proper React Native syntax, clear styling, and organized components, it's implementing the wrong interface entirely. The code quality is decent for what it is, but it's not what was requested."
+        },
+        "completeness": {
+          "score": 1,
+          "explanation": "The implementation is essentially 0% complete in terms of matching the target UI. None of the key features are present: no tab navigation, no circular progress indicators, no statistics display, no chart visualization, and wrong color scheme. It appears to be a generic template rather than an implementation of the Vehicle XOS dashboard."
+        },
+        "overall_score": 2,
+        "summary": "The generated code bears almost no resemblance to the original mobile UI screenshot. It appears to be a generic placeholder template rather than an implementation of the Vehicle XOS dashboard. All major UI elements are missing including the tab navigation, circular statistics displays, chart visualization, and the distinctive gradient background. The code quality itself is acceptable, but it's implementing an entirely different interface.",
+        "strengths": [
+          "Clean React Native code structure",
+          "Proper use of StyleSheet",
+          "Well-organized component hierarchy for what it implements",
+          "Includes TouchableOpacity for interactive elements"
+        ],
+        "weaknesses": [
+          "Completely missing the circular progress indicators (238 KM and 6k PKG)",
+          "No tab navigation (Statistics/Locations/Reports)",
+          "Missing the line chart visualization at the bottom",
+          "Wrong color scheme - uses white background instead of gradient blue/purple",
+          "Wrong header - has generic back button instead of 'Vehicle XOS' title with add button",
+          "Contains elements not in original (Title, Subtitle, Description, Action buttons, Footer)",
+          "No data visualization components",
+          "Appears to be a generic template unrelated to the target design"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_001.png",
+          "code_file_path": "output\\mobile_ui_001_model2.jsx",
+          "image_name": "mobile_ui_001.png",
+          "code_filename": "mobile_ui_001_model2.jsx",
+          "model_name": "Model 2"
+        }
+      },
+      {
+        "element_detection": {
+          "score": 0,
+          "explanation": "The code simply displays the image itself rather than implementing any of the UI components visible in the screenshot. None of the elements (profile image, artist name, play button, tabs, gallery images, similar artists list, navigation bar, etc.) are actually implemented as React components."
+        },
+        "structural_accuracy": {
+          "score": 0,
+          "explanation": "There is no component structure at all. The code just renders the screenshot as a static image, with no nested components, hierarchy, or organization that would match the original UI structure."
+        },
+        "layout_accuracy": {
+          "score": 0,
+          "explanation": "Since the code only displays a static image, there is no actual layout implementation. No flexbox, grid, positioning, or spacing is implemented to recreate the visual layout."
+        },
+        "code_quality": {
+          "score": 1,
+          "explanation": "The code is syntactically correct and imports React properly, but it doesn't demonstrate any meaningful React development practices. It's essentially a placeholder that shows the target image rather than implementing it. The only reason it gets 1 point instead of 0 is that it's valid React syntax."
+        },
+        "completeness": {
+          "score": 0,
+          "explanation": "The implementation is 0% complete. None of the functionality, interactivity, or UI components are implemented. It's just displaying the reference image as a static asset."
+        },
+        "overall_score": 0,
+        "summary": "This is not an actual implementation of the UI. The code simply displays the original screenshot as an image rather than recreating the interface with React components. This represents no progress toward building the actual mobile UI.",
+        "strengths": [
+          "Valid React syntax",
+          "Code compiles without errors"
+        ],
+        "weaknesses": [
+          "No UI components implemented",
+          "No layout structure created",
+          "No styling applied",
+          "No interactivity or functionality",
+          "Simply displays the target image instead of recreating it",
+          "Missing all major elements: profile section, buttons, tabs, gallery, artist list, navigation",
+          "No component hierarchy or organization",
+          "Does not demonstrate any understanding of the UI requirements"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_002.png",
+          "code_file_path": "output\\mobile_ui_002_model1.jsx",
+          "image_name": "mobile_ui_002.png",
+          "code_filename": "mobile_ui_002_model1.jsx",
+          "model_name": "Model 1"
+        }
+      },
+      {
+        "element_detection": {
+          "score": 1,
+          "explanation": "The generated code is missing almost all major UI components from the screenshot. It doesn't include the artist profile image, artist name, genre text, play button, bookmark/share icons, tabs (Overview/About), gallery section with images, social media icons, similar artists list, or bottom navigation bar. Only contains generic placeholder buttons."
+        },
+        "structural_accuracy": {
+          "score": 0,
+          "explanation": "The code structure bears no resemblance to the original UI. The screenshot shows a complex artist profile page with multiple sections (header, tabs, gallery, artist list, navigation), but the code only contains a simple view with three buttons and a divider. The nesting and organization are completely different."
+        },
+        "layout_accuracy": {
+          "score": 0,
+          "explanation": "The layout structure is entirely incorrect. The screenshot shows a vertical scrolling artist profile with specific sections stacked vertically, while the code shows a centered layout with horizontally arranged buttons. There's no attempt to replicate the dark theme, spacing, or positioning of elements from the original design."
+        },
+        "code_quality": {
+          "score": 3,
+          "explanation": "While the code is syntactically correct and uses React Native components properly, it has issues: missing Text import, inline styles instead of StyleSheet, and the code doesn't match the requirements at all. The structure is clean but completely irrelevant to the task."
+        },
+        "completeness": {
+          "score": 0,
+          "explanation": "The implementation is essentially 0% complete. None of the visible functionality from the screenshot is present - no artist profile, no play functionality, no gallery, no social links, no similar artists section, and no bottom navigation. This appears to be a generic placeholder rather than an attempt to recreate the UI."
+        },
+        "overall_score": 1,
+        "summary": "The generated code fails to recreate the artist profile UI shown in the screenshot. It appears to be a generic placeholder with simple buttons that bears no resemblance to the complex, feature-rich music artist profile page. The code is missing all key components including the profile header, media controls, content sections, and navigation elements.",
+        "strengths": [
+          "Code is syntactically valid React Native",
+          "Uses proper View and TouchableOpacity components",
+          "Basic styling structure is present"
+        ],
+        "weaknesses": [
+          "Missing all major UI components (profile image, artist info, play button, tabs, gallery, social icons, artist list, navigation)",
+          "Completely wrong layout structure - doesn't match the vertical scrolling profile design",
+          "No dark theme implementation despite screenshot showing dark UI",
+          "Missing Text component import",
+          "No attempt to replicate the actual content or functionality",
+          "Appears to be a generic placeholder rather than a genuine attempt at the UI",
+          "No scrollable content implementation",
+          "Missing all interactive elements like tabs, gallery images, and navigation bar"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_002.png",
+          "code_file_path": "output\\mobile_ui_002_model2.jsx",
+          "image_name": "mobile_ui_002.png",
+          "code_filename": "mobile_ui_002_model2.jsx",
+          "model_name": "Model 2"
+        }
+      },
+      {
+        "element_detection": {
+          "score": 1,
+          "explanation": "The generated code only includes a single image and text element, completely missing all major UI components visible in the screenshot: profile header with avatar and name, edit profile button, settings icon, stats section (posts/followers/following), navigation tabs, grid of 9 images, and bottom navigation bar."
+        },
+        "structural_accuracy": {
+          "score": 0,
+          "explanation": "The code structure bears no resemblance to the Instagram-like profile layout shown in the image. It has a simple centered container with one image and text, whereas the screenshot shows a complex nested structure with header, stats, navigation, image grid, and bottom navigation."
+        },
+        "layout_accuracy": {
+          "score": 0,
+          "explanation": "The layout is completely incorrect. The code creates a centered single-column layout, while the screenshot shows a sophisticated Instagram profile layout with multiple sections: top profile area, stats row, icon navigation row, 3-column image grid, and bottom navigation bar."
+        },
+        "code_quality": {
+          "score": 3,
+          "explanation": "While the code is syntactically correct and follows basic React Native conventions with proper StyleSheet usage, it's far too simplistic for the task. The code quality is decent for what it does, but it doesn't attempt to solve the actual problem of recreating the UI."
+        },
+        "completeness": {
+          "score": 1,
+          "explanation": "The implementation is approximately 5% complete at best. It only shows a basic centered image and text, missing: profile section, user stats, navigation icons, 9-image grid layout, bottom navigation, settings icon, edit profile button, and all interactive elements."
+        },
+        "overall_score": 1,
+        "summary": "The generated code is completely inadequate for recreating the Instagram profile UI shown in the screenshot. It appears to be a generic placeholder template rather than an attempt to match the specific UI requirements. The code only contains a centered image and text, missing all critical components of the profile interface.",
+        "strengths": [
+          "Code is syntactically correct",
+          "Uses proper React Native components",
+          "StyleSheet is properly structured"
+        ],
+        "weaknesses": [
+          "Missing profile header with avatar, name, and settings icon",
+          "No stats section (posts, followers, following)",
+          "Missing edit profile button",
+          "No navigation icons row",
+          "Missing 3x3 image grid layout",
+          "No bottom navigation bar",
+          "Completely wrong layout structure",
+          "Does not attempt to recreate any specific UI elements from the screenshot",
+          "Appears to be a generic template rather than a targeted implementation"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_003.png",
+          "code_file_path": "output\\mobile_ui_003_model1.jsx",
+          "image_name": "mobile_ui_003.png",
+          "code_filename": "mobile_ui_003_model1.jsx",
+          "model_name": "Model 1"
+        }
+      },
+      {
+        "element_detection": {
+          "score": 1,
+          "explanation": "The generated code completely misses the Instagram profile layout. It lacks the profile picture, username, stats (posts/followers/following), profile edit button, settings icon, navigation tabs, and the photo grid. Instead, it shows a generic sign-up form with unrelated elements."
+        },
+        "structural_accuracy": {
+          "score": 0,
+          "explanation": "The structure is entirely incorrect. The code creates a sign-up form layout rather than an Instagram profile page. There's no proper nesting of profile components, no grid layout for photos, and no navigation structure matching the original UI."
+        },
+        "layout_accuracy": {
+          "score": 0,
+          "explanation": "The layout bears no resemblance to the original Instagram profile page. The original has a header with profile info, a horizontal stats row, navigation tabs, and a photo grid. The generated code shows a centered vertical layout with logo, title, input field, and button."
+        },
+        "code_quality": {
+          "score": 3,
+          "explanation": "While the code follows basic React Native syntax and uses StyleSheet properly, it's using React Native instead of React for web. The code structure is clean but completely inappropriate for the task at hand. It also has incomplete components like an undefined Button component."
+        },
+        "completeness": {
+          "score": 0,
+          "explanation": "The implementation is 0% complete relative to the Instagram profile UI. None of the required features are present: no profile section, no stats display, no photo grid, no navigation tabs, and no settings. It's a completely different interface."
+        },
+        "overall_score": 1,
+        "summary": "The generated code fails to recreate the Instagram profile UI in any meaningful way. It appears to be a generic sign-up form template that has no relation to the provided screenshot. The code uses React Native instead of React for web and misses all key components of the Instagram profile interface.",
+        "strengths": [
+          "Basic React Native syntax is correct",
+          "StyleSheet is properly structured",
+          "Code is readable and organized"
+        ],
+        "weaknesses": [
+          "Completely wrong interface - shows sign-up form instead of Instagram profile",
+          "Missing all major UI components: profile picture, stats, photo grid, navigation",
+          "Uses React Native instead of React for web",
+          "No grid layout for photos",
+          "No profile header section",
+          "No navigation tabs or icons",
+          "Incomplete Button component implementation",
+          "No resemblance to the original screenshot whatsoever"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_003.png",
+          "code_file_path": "output\\mobile_ui_003_model2.jsx",
+          "image_name": "mobile_ui_003.png",
+          "code_filename": "mobile_ui_003_model2.jsx",
+          "model_name": "Model 2"
+        }
+      },
+      {
+        "element_detection": {
+          "score": 1,
+          "explanation": "The generated code contains generic website elements (logo, navigation, header, button) that do not match any of the UI components visible in the screenshot. The screenshot shows a map-based delivery/location app with location inputs, map markers, user avatars, and a bottom navigation bar - none of which are present in the generated code."
+        },
+        "structural_accuracy": {
+          "score": 0,
+          "explanation": "The structure is completely wrong. The generated code follows a typical website layout (header, nav, main) while the screenshot shows a mobile app with a map view, location inputs at the top, markers on the map, and a bottom navigation bar. There is no structural similarity between the two."
+        },
+        "layout_accuracy": {
+          "score": 0,
+          "explanation": "The layout is entirely incorrect. The generated code suggests a horizontal navigation website layout, while the screenshot shows a mobile map application with vertical stacking of elements: status bar, location inputs, full-screen map with markers, and bottom navigation. No layout elements match."
+        },
+        "code_quality": {
+          "score": 3,
+          "explanation": "While the code itself is syntactically correct and follows basic React structure, it's a generic template that doesn't address the requirements. It uses semantic HTML and proper component structure, but it's completely irrelevant to the task at hand."
+        },
+        "completeness": {
+          "score": 0,
+          "explanation": "The implementation is 0% complete. It lacks all essential features visible in the screenshot: map integration, location search inputs, GPS functionality, map markers, user avatars, bottom navigation with icons, and the overall mobile app structure."
+        },
+        "overall_score": 1,
+        "summary": "The generated code is completely unrelated to the mobile UI screenshot. It appears to be a generic website template rather than a location-based mobile app. None of the key features (map, location inputs, markers, bottom navigation) are implemented or even suggested in the code structure.",
+        "strengths": [
+          "Code is syntactically valid React",
+          "Uses basic component structure",
+          "Properly formatted and readable"
+        ],
+        "weaknesses": [
+          "Completely wrong application type (website vs mobile map app)",
+          "Missing all key UI components (map, location inputs, markers)",
+          "No map integration or geolocation functionality",
+          "No bottom navigation bar",
+          "No user avatars or profile elements",
+          "No mobile-specific layout or styling",
+          "Does not address any requirements from the screenshot"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_004.png",
+          "code_file_path": "output\\mobile_ui_004_model1.jsx",
+          "image_name": "mobile_ui_004.png",
+          "code_filename": "mobile_ui_004_model1.jsx",
+          "model_name": "Model 1"
+        }
+      },
+      {
+        "element_detection": {
+          "score": 1,
+          "explanation": "The generated code contains generic UI elements (buttons and text inputs) that do not match the actual screenshot at all. The screenshot shows a map-based delivery/location app with map markers, location inputs, profile avatars, and a bottom navigation bar. None of these elements are present in the generated code."
+        },
+        "structural_accuracy": {
+          "score": 0,
+          "explanation": "The structure is completely incorrect. The screenshot shows a map interface with overlays, location markers, and navigation elements, but the code generates a simple form with buttons and text inputs. There's no component hierarchy that matches the actual UI structure."
+        },
+        "layout_accuracy": {
+          "score": 0,
+          "explanation": "The layout is entirely wrong. The screenshot shows a full-screen map with floating UI elements (location inputs at top, markers on map, bottom navigation), while the code creates a centered vertical layout with form elements. The positioning, spacing, and alignment don't match at all."
+        },
+        "code_quality": {
+          "score": 4,
+          "explanation": "While the code itself is syntactically correct and follows basic React Native conventions with proper styling, it's completely irrelevant to the task. The code quality is decent in isolation but fails to address the actual requirements."
+        },
+        "completeness": {
+          "score": 0,
+          "explanation": "The implementation is 0% complete relative to the screenshot. It's missing: the map component, location input fields, map markers, profile avatars, bottom navigation bar, floating action buttons, and all the specific UI elements visible in the screenshot."
+        },
+        "overall_score": 1,
+        "summary": "The generated code bears no resemblance to the screenshot. It appears to be a generic form template rather than a map-based location/delivery app interface. The code would need to be completely rewritten to match the screenshot.",
+        "strengths": [
+          "Code is syntactically correct",
+          "Follows basic React Native structure",
+          "Includes proper StyleSheet usage"
+        ],
+        "weaknesses": [
+          "Completely wrong UI components - shows form elements instead of a map interface",
+          "Missing all key features: map view, location markers, profile images, bottom navigation",
+          "No map integration or location-based functionality",
+          "Layout structure doesn't match the screenshot at all",
+          "Missing floating action buttons and overlay elements",
+          "No attempt to recreate the actual app's design or functionality"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_004.png",
+          "code_file_path": "output\\mobile_ui_004_model2.jsx",
+          "image_name": "mobile_ui_004.png",
+          "code_filename": "mobile_ui_004_model2.jsx",
+          "model_name": "Model 2"
+        }
+      },
+      {
+        "element_detection": {
+          "score": 2,
+          "explanation": "The generated code is missing most of the critical UI elements from the screenshot. It lacks: the back arrow button, search input field with 'The be' text, search icon, search suggestions list ('autyful tourist...', 'autyful views...', 'st things Japan...', etc.), and the iOS keyboard. Instead, it shows a completely different UI with a header, settings button, events list, etc."
+        },
+        "structural_accuracy": {
+          "score": 1,
+          "explanation": "The structure does not match at all. The screenshot shows a search interface with a simple hierarchy: back button, search bar, suggestions list, and keyboard. The generated code creates a complex nested structure with headers, event lists, and navigation elements that don't exist in the original UI."
+        },
+        "layout_accuracy": {
+          "score": 1,
+          "explanation": "The layout is completely incorrect. The screenshot shows a vertical layout with search at top, suggestions in middle, and keyboard at bottom. The generated code creates a different layout with headers, buttons, and event cards that don't match the original design at all."
+        },
+        "code_quality": {
+          "score": 3,
+          "explanation": "While the code is syntactically valid React Native code with proper View and Text components, it has issues: uses inline styles extensively (not best practice), has syntax errors (missing closing braces and parentheses), and uses View instead of proper React Native components. The code structure itself is readable but doesn't follow React best practices."
+        },
+        "completeness": {
+          "score": 1,
+          "explanation": "The implementation is not complete for the intended UI. It's missing the search functionality, autocomplete suggestions, keyboard interface, and back navigation. Instead, it implements a completely different feature set (events list) that wasn't requested."
+        },
+        "overall_score": 1.6,
+        "summary": "The generated code does not match the screenshot at all. It appears to be code for a completely different application (an events app) rather than the search interface shown in the screenshot. The code implements none of the visible elements like the search bar, suggestions, or keyboard.",
+        "strengths": [
+          "Code is syntactically structured (though with errors)",
+          "Uses React Native components",
+          "Has some basic styling applied"
+        ],
+        "weaknesses": [
+          "Completely wrong UI - implements an events list instead of a search interface",
+          "Missing all key elements: back button, search input, search icon, suggestions list, keyboard",
+          "Incorrect layout structure",
+          "Has syntax errors (missing closing braces)",
+          "Uses inline styles instead of StyleSheet",
+          "No search functionality or autocomplete logic",
+          "Does not match the visual design at all"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_005.png",
+          "code_file_path": "output\\mobile_ui_005_model1.jsx",
+          "image_name": "mobile_ui_005.png",
+          "code_filename": "mobile_ui_005_model1.jsx",
+          "model_name": "Model 1"
+        }
+      },
+      {
+        "element_detection": {
+          "score": 1,
+          "explanation": "The generated code completely misses all the actual UI elements from the screenshot. The screenshot shows a search interface with a back button, search input field, search suggestions list, and an on-screen keyboard. The code instead implements a welcome screen with login buttons and social media icons that don't exist in the original UI."
+        },
+        "structural_accuracy": {
+          "score": 0,
+          "explanation": "The component hierarchy is completely incorrect. The screenshot shows a search interface structure (header with back button, search input, suggestions list, keyboard), but the code creates an entirely different structure with logo, title, buttons, and social media icons. None of the nesting matches the original UI."
+        },
+        "layout_accuracy": {
+          "score": 0,
+          "explanation": "The layout is completely wrong. The screenshot shows a vertical layout with search at top, suggestions in middle, and keyboard at bottom. The code creates a centered layout with elements that don't exist in the original design. No aspect of the positioning, spacing, or alignment matches."
+        },
+        "code_quality": {
+          "score": 3,
+          "explanation": "While the code follows basic React Native syntax and has proper imports and styling structure, it has critical issues: missing imports for Text, Image, and Button components, uses non-existent image paths, and implements functionality completely unrelated to the screenshot. The code would not run without fixes."
+        },
+        "completeness": {
+          "score": 0,
+          "explanation": "The implementation is 0% complete as it doesn't implement any of the visible functionality from the screenshot. Missing: search input field, search icon, back button, search suggestions list, keyboard interface, and the entire search functionality."
+        },
+        "overall_score": 1,
+        "summary": "The generated code bears no resemblance to the original mobile UI screenshot. It appears to be code for a completely different application (a login/welcome screen) rather than the search interface shown in the image. All major elements are missing or incorrect.",
+        "strengths": [
+          "Basic React Native syntax is used",
+          "StyleSheet is properly structured",
+          "Code is readable and formatted"
+        ],
+        "weaknesses": [
+          "Completely wrong UI implementation - doesn't match screenshot at all",
+          "Missing all critical components (search bar, suggestions, keyboard)",
+          "Missing required imports (Text, Image, Button)",
+          "References non-existent image files",
+          "Wrong layout structure and element hierarchy",
+          "No search functionality implemented",
+          "Creates elements that don't exist in the original design"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_005.png",
+          "code_file_path": "output\\mobile_ui_005_model2.jsx",
+          "image_name": "mobile_ui_005.png",
+          "code_filename": "mobile_ui_005_model2.jsx",
+          "model_name": "Model 2"
+        }
+      }
+    ],
+    "meta": {
+      "total_images": 5,
+      "total_evaluations": 10,
+      "model_used": "claude-sonnet-4-5-20250929",
+      "images_dir": "./dataset/mobile_ui_design_images",
+      "code_dir": "./output"
+    }
+  }
+}

@@ -1,0 +1,453 @@
+{
+  "evaluation_summary": {
+    "total_images_evaluated": 5,
+    "total_evaluations": 10,
+    "successful_evaluations": 0,
+    "winner": "Tie",
+    "winner_score": 0
+  },
+  "model_comparison": {
+    "model1": {
+      "model_name": "gemma3:4b-it-qat",
+      "count": 5,
+      "average_overall_score": 0,
+      "average_criteria_scores": {},
+      "successful_evaluations": 0
+    },
+    "model2": {
+      "model_name": "qwen2:7b",
+      "count": 4,
+      "average_overall_score": 0,
+      "average_criteria_scores": {},
+      "successful_evaluations": 0
+    }
+  },
+  "model_strengths": {
+    "gemma3:4b-it-qat": [],
+    "qwen2:7b": []
+  },
+  "recommendations": [
+    "Both models show comparable results",
+    "Model selection may depend on specific requirements"
+  ],
+  "raw_evaluation_data": {
+    "evaluation_summary": {
+      "total_evaluations": 10,
+      "successful_evaluations": 9,
+      "failed_evaluations": 1,
+      "model1_summary": {
+        "average_overall_score": 0.0,
+        "average_criteria_scores": {
+          "element_detection": 0.0,
+          "structural_accuracy": 0.0,
+          "layout_accuracy": 0.0,
+          "code_quality": 0.0,
+          "completeness": 0.0
+        },
+        "count": 5
+      },
+      "model2_summary": {
+        "average_overall_score": 0.0,
+        "average_criteria_scores": {
+          "element_detection": 0.0,
+          "structural_accuracy": 0.0,
+          "layout_accuracy": 0.0,
+          "code_quality": 0.0,
+          "completeness": 0.0
+        },
+        "count": 4
+      },
+      "overall_summary": {
+        "average_overall_score": 0.0,
+        "average_criteria_scores": {
+          "element_detection": 0.0,
+          "structural_accuracy": 0.0,
+          "layout_accuracy": 0.0,
+          "code_quality": 0.0,
+          "completeness": 0.0
+        },
+        "count": 9
+      }
+    },
+    "detailed_results": [
+      {
+        "element_detection": {
+          "score": 0,
+          "explanation": "No code was generated. The provided code snippet only contains a comment indicating a code generation error. None of the UI elements visible in the screenshot (header, navigation tabs, circular progress indicators, statistics labels, or graph) are present in the code."
+        },
+        "structural_accuracy": {
+          "score": 0,
+          "explanation": "No structural elements exist in the generated code to evaluate. The code generation failed, resulting in only an error comment."
+        },
+        "layout_accuracy": {
+          "score": 0,
+          "explanation": "No layout structure is present in the code. There are no components, containers, or layout elements that could be compared to the screenshot's visual arrangement."
+        },
+        "code_quality": {
+          "score": 0,
+          "explanation": "No actual code was generated to assess quality. The file only contains a comment about a code generation error, so there's nothing to evaluate in terms of React best practices, code structure, or semantic markup."
+        },
+        "completeness": {
+          "score": 0,
+          "explanation": "The implementation is completely absent. None of the visible features from the screenshot (Vehicle XOS app header, Statistics/Locations/Reports tabs, circular progress indicators showing 238 KM and 6k PKG, or the line graph) are implemented."
+        },
+        "overall_score": 0,
+        "summary": "The code generation completely failed, resulting in no implementation whatsoever. Only an error comment exists in the file, with no React components, JSX, or any code that attempts to recreate the mobile UI from the screenshot.",
+        "strengths": [],
+        "weaknesses": [
+          "Complete absence of generated code",
+          "No UI components implemented",
+          "No structure or layout present",
+          "Code generation error prevented any implementation",
+          "Missing all visual elements from the screenshot",
+          "No React components or JSX markup",
+          "Cannot evaluate any aspect of the intended UI recreation"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_001.png",
+          "code_file_path": "output\\mobile_ui_001_model1.jsx",
+          "image_name": "mobile_ui_001.png",
+          "code_filename": "mobile_ui_001_model1.jsx",
+          "model_name": "Model 1"
+        }
+      },
+      {
+        "element_detection": {
+          "score": 0,
+          "explanation": "The generated code is empty/contains only an error comment. No UI elements from the screenshot are detected or implemented."
+        },
+        "structural_accuracy": {
+          "score": 0,
+          "explanation": "No code structure exists to evaluate. The code generation resulted in an error with no actual implementation."
+        },
+        "layout_accuracy": {
+          "score": 0,
+          "explanation": "No layout implementation exists. The screenshot shows a complex dashboard with circular progress indicators, graphs, and statistics that are completely missing."
+        },
+        "code_quality": {
+          "score": 0,
+          "explanation": "No code exists to evaluate for quality. The file only contains an error comment indicating a code generation failure."
+        },
+        "completeness": {
+          "score": 0,
+          "explanation": "The implementation is 0% complete. None of the visible UI elements (navigation tabs, circular statistics, line graph, header) are implemented."
+        },
+        "overall_score": 0,
+        "summary": "The code generation completely failed, resulting in an empty file with only an error comment. No implementation of the Vehicle XOS dashboard UI exists.",
+        "strengths": [],
+        "weaknesses": [
+          "Complete absence of code implementation",
+          "Code generation error prevented any UI creation",
+          "Missing all UI components: header, navigation tabs, circular progress indicators, statistics display, and line graph",
+          "No React component structure",
+          "No styling or layout implementation",
+          "Cannot be rendered or used in any capacity"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_001.png",
+          "code_file_path": "output\\mobile_ui_001_model2.jsx",
+          "image_name": "mobile_ui_001.png",
+          "code_filename": "mobile_ui_001_model2.jsx",
+          "model_name": "Model 2"
+        }
+      },
+      {
+        "element_detection": {
+          "score": 0,
+          "explanation": "No code was generated. The provided code snippet only contains a comment indicating a code generation error. Therefore, no UI elements from the screenshot are present in the code."
+        },
+        "structural_accuracy": {
+          "score": 0,
+          "explanation": "Since no actual React code was generated, there is no structure to evaluate. The code file appears to be empty or contains only an error comment."
+        },
+        "layout_accuracy": {
+          "score": 0,
+          "explanation": "Without any generated code, there is no layout structure to assess. No positioning, spacing, or alignment code exists to compare with the screenshot."
+        },
+        "code_quality": {
+          "score": 0,
+          "explanation": "No React code exists to evaluate for quality, best practices, or semantic structure. Only an error comment is present."
+        },
+        "completeness": {
+          "score": 0,
+          "explanation": "The implementation is 0% complete as no code was generated. None of the visible UI elements from the screenshot (artist profile, play button, gallery, similar artists, navigation bar, etc.) are implemented."
+        },
+        "overall_score": 0,
+        "summary": "No React code was generated. The file contains only a code generation error comment, resulting in a complete absence of implementation for the artist profile page shown in the screenshot.",
+        "strengths": [],
+        "weaknesses": [
+          "Complete failure to generate any React code",
+          "No UI components implemented",
+          "No structure or layout code present",
+          "Missing all elements from the screenshot including artist profile header, play button, tabs, gallery, similar artists list, and navigation",
+          "Code generation error prevented any implementation"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_002.png",
+          "code_file_path": "output\\mobile_ui_002_model1.jsx",
+          "image_name": "mobile_ui_002.png",
+          "code_filename": "mobile_ui_002_model1.jsx",
+          "model_name": "Model 1"
+        }
+      },
+      {
+        "error": "API call failed: Error code: 500 - {'type': 'error', 'error': {'type': 'api_error', 'message': 'Overloaded'}, 'request_id': None}",
+        "overall_score": 0,
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_002.png",
+          "code_file_path": "output\\mobile_ui_002_model2.jsx",
+          "image_name": "mobile_ui_002.png",
+          "code_filename": "mobile_ui_002_model2.jsx",
+          "model_name": "Model 2"
+        }
+      },
+      {
+        "element_detection": {
+          "score": 0,
+          "explanation": "No code was generated. The provided React code is empty with only a comment indicating a code generation error. Therefore, no UI elements from the screenshot are detected in the code."
+        },
+        "structural_accuracy": {
+          "score": 0,
+          "explanation": "Since no code was generated, there is no component structure to evaluate. The screenshot shows an Instagram-like profile page with a header, profile stats, navigation tabs, and a grid of images, but none of this is present in the code."
+        },
+        "layout_accuracy": {
+          "score": 0,
+          "explanation": "No layout implementation exists in the provided code. The screenshot displays a complex layout with profile information at the top, statistics row, navigation icons, and a 3-column image grid, but none of this is reflected in the empty code."
+        },
+        "code_quality": {
+          "score": 0,
+          "explanation": "There is no code to evaluate for quality. The file only contains an error comment, indicating a failure in the code generation process."
+        },
+        "completeness": {
+          "score": 0,
+          "explanation": "The implementation is 0% complete as no code was generated. None of the visible UI components (profile picture, username, edit button, stats, navigation, image grid) are implemented."
+        },
+        "overall_score": 0,
+        "summary": "The code generation completely failed, resulting in an empty file with only an error comment. No UI components, structure, or functionality from the Instagram-like profile page screenshot were implemented.",
+        "strengths": [],
+        "weaknesses": [
+          "Complete failure to generate any code",
+          "No UI components implemented",
+          "No React component structure present",
+          "No attempt at layout or styling",
+          "Code generation error prevents any evaluation of implementation quality"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_003.png",
+          "code_file_path": "output\\mobile_ui_003_model1.jsx",
+          "image_name": "mobile_ui_003.png",
+          "code_filename": "mobile_ui_003_model1.jsx",
+          "model_name": "Model 1"
+        }
+      },
+      {
+        "element_detection": {
+          "score": 0,
+          "explanation": "No code was generated. The code generation resulted in an error, so there are no UI elements present to evaluate against the screenshot."
+        },
+        "structural_accuracy": {
+          "score": 0,
+          "explanation": "No code structure exists to evaluate. The generation failed, resulting in an empty file with only an error comment."
+        },
+        "layout_accuracy": {
+          "score": 0,
+          "explanation": "Without any generated code, there is no layout to assess. The screenshot shows an Instagram-like profile page with a grid of images, but no corresponding code exists."
+        },
+        "code_quality": {
+          "score": 0,
+          "explanation": "No code was produced to evaluate for quality, best practices, or React conventions."
+        },
+        "completeness": {
+          "score": 0,
+          "explanation": "The implementation is 0% complete as no code was generated. The screenshot shows a complete profile page with header, stats, navigation, and image grid, but none of this is implemented."
+        },
+        "overall_score": 0,
+        "summary": "Code generation completely failed with an error. No React components, UI elements, or functionality were implemented. The screenshot shows a social media profile page with profile information, statistics (242 posts, 473 followers, 521 following), navigation icons, and a 3-column grid of images, but none of this is reflected in the generated output.",
+        "strengths": [],
+        "weaknesses": [
+          "Complete failure to generate any code",
+          "Code generation error prevented any implementation",
+          "No UI components created",
+          "No structure or layout implemented",
+          "Missing all elements from the screenshot including profile header, stats, navigation, and image grid",
+          "Zero functionality implemented"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_003.png",
+          "code_file_path": "output\\mobile_ui_003_model2.jsx",
+          "image_name": "mobile_ui_003.png",
+          "code_filename": "mobile_ui_003_model2.jsx",
+          "model_name": "Model 2"
+        }
+      },
+      {
+        "element_detection": {
+          "score": 0,
+          "explanation": "No code was generated. The provided code snippet shows only an error comment, so there are no UI elements present to evaluate against the screenshot."
+        },
+        "structural_accuracy": {
+          "score": 0,
+          "explanation": "No code structure exists to evaluate. The code generation failed, resulting in an empty implementation with no component hierarchy."
+        },
+        "layout_accuracy": {
+          "score": 0,
+          "explanation": "Without any generated code, there is no layout to assess. The screenshot shows a map-based UI with location markers, input fields, and navigation elements, but none of this is reflected in the code."
+        },
+        "code_quality": {
+          "score": 0,
+          "explanation": "No code was generated to evaluate for quality, best practices, or semantic structure. Only an error comment is present."
+        },
+        "completeness": {
+          "score": 0,
+          "explanation": "The implementation is 0% complete as no functional code exists. The screenshot shows a complex location/map interface with multiple interactive elements, none of which are implemented."
+        },
+        "overall_score": 0,
+        "summary": "Code generation failed completely. No React code was produced to recreate the mobile UI shown in the screenshot, which depicts a map-based location tracking interface with input fields, markers, tooltips, and bottom navigation.",
+        "strengths": [],
+        "weaknesses": [
+          "Complete failure to generate any code",
+          "No UI elements implemented",
+          "No component structure created",
+          "No functionality provided",
+          "Unable to recreate any aspect of the original design"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_004.png",
+          "code_file_path": "output\\mobile_ui_004_model1.jsx",
+          "image_name": "mobile_ui_004.png",
+          "code_filename": "mobile_ui_004_model1.jsx",
+          "model_name": "Model 1"
+        }
+      },
+      {
+        "element_detection": {
+          "score": 0,
+          "explanation": "No code was generated. The code generation resulted in an error, so there are no UI elements present to detect or evaluate."
+        },
+        "structural_accuracy": {
+          "score": 0,
+          "explanation": "No code structure exists to evaluate. The generation error means there is no component hierarchy, nesting, or organization to assess."
+        },
+        "layout_accuracy": {
+          "score": 0,
+          "explanation": "Without any generated code, there is no layout implementation to compare against the original screenshot showing a map-based UI with location markers and navigation elements."
+        },
+        "code_quality": {
+          "score": 0,
+          "explanation": "No code was produced, so there are no React best practices, semantic elements, or code structure to evaluate for quality."
+        },
+        "completeness": {
+          "score": 0,
+          "explanation": "The implementation is 0% complete as no code was generated. None of the visible functionality from the screenshot (map view, location inputs, markers, bottom navigation) is present."
+        },
+        "overall_score": 0,
+        "summary": "Code generation failed completely with an error. No React code was produced to implement the map-based location/navigation UI shown in the screenshot. The original UI shows a sophisticated map interface with location markers, search inputs, an info tooltip, and bottom navigation bar - none of which could be evaluated.",
+        "strengths": [],
+        "weaknesses": [
+          "Complete code generation failure",
+          "No UI elements implemented",
+          "No component structure created",
+          "No functionality present",
+          "Unable to recreate any aspect of the original design"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_004.png",
+          "code_file_path": "output\\mobile_ui_004_model2.jsx",
+          "image_name": "mobile_ui_004.png",
+          "code_filename": "mobile_ui_004_model2.jsx",
+          "model_name": "Model 2"
+        }
+      },
+      {
+        "element_detection": {
+          "score": 0,
+          "explanation": "No code was generated. The provided React code is empty/errored, so no UI elements are present to detect."
+        },
+        "structural_accuracy": {
+          "score": 0,
+          "explanation": "No code structure exists to evaluate. The generation resulted in an error with no actual component code."
+        },
+        "layout_accuracy": {
+          "score": 0,
+          "explanation": "No layout implementation exists to compare against the screenshot showing a search interface with suggestions and keyboard."
+        },
+        "code_quality": {
+          "score": 0,
+          "explanation": "No code was generated to evaluate for quality, best practices, or React conventions."
+        },
+        "completeness": {
+          "score": 0,
+          "explanation": "The implementation is 0% complete as no code was generated. The UI requires a search bar, back button, suggestion list, and virtual keyboard."
+        },
+        "overall_score": 0,
+        "summary": "Code generation failed completely. No React code was produced to implement the search interface shown in the screenshot.",
+        "strengths": [],
+        "weaknesses": [
+          "Complete generation failure - no code produced",
+          "Missing search input field with 'The be' text",
+          "Missing back arrow navigation button",
+          "Missing search icon",
+          "Missing autocomplete suggestion list with items like 'autyful tourist', 'autyful views', 'st things Japan', etc.",
+          "Missing virtual keyboard interface with QWERTY layout",
+          "Missing keyboard controls (123, space, return buttons)",
+          "Missing emoji and microphone icons at keyboard bottom",
+          "No component structure or React implementation whatsoever"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_005.png",
+          "code_file_path": "output\\mobile_ui_005_model1.jsx",
+          "image_name": "mobile_ui_005.png",
+          "code_filename": "mobile_ui_005_model1.jsx",
+          "model_name": "Model 1"
+        }
+      },
+      {
+        "element_detection": {
+          "score": 0,
+          "explanation": "No code was generated. The code file appears to be empty or contains only an error comment, so no UI elements are present to detect."
+        },
+        "structural_accuracy": {
+          "score": 0,
+          "explanation": "No code structure exists to evaluate. There are no components, no hierarchy, and no organization present."
+        },
+        "layout_accuracy": {
+          "score": 0,
+          "explanation": "Without any generated code, there is no layout implementation to assess against the screenshot showing a search interface with suggestions and keyboard."
+        },
+        "code_quality": {
+          "score": 0,
+          "explanation": "No code exists to evaluate for quality, best practices, or semantic structure. The generation appears to have failed completely."
+        },
+        "completeness": {
+          "score": 0,
+          "explanation": "The implementation is 0% complete. The screenshot shows a search bar, back button, search suggestions list, and virtual keyboard - none of which are implemented in the generated code."
+        },
+        "overall_score": 0,
+        "summary": "The code generation has completely failed. No React code was produced to recreate the mobile search UI shown in the screenshot. The image shows a search interface with 'The be' typed in the search bar, autocomplete suggestions below (including 'autyful tourist', 'autyful views', 'st things Japan', 'st things USA', 'st things Viet Nam'), and a mobile keyboard at the bottom. None of these elements are present in the generated output.",
+        "strengths": [],
+        "weaknesses": [
+          "Complete failure to generate any code",
+          "No UI components implemented",
+          "No React structure present",
+          "Missing all required elements: search bar, back button, suggestions list, keyboard",
+          "No styling or layout implementation",
+          "Code generation error indicates a fundamental failure in the generation process"
+        ],
+        "meta": {
+          "image_path": "dataset\\mobile_ui_design_images\\mobile_ui_005.png",
+          "code_file_path": "output\\mobile_ui_005_model2.jsx",
+          "image_name": "mobile_ui_005.png",
+          "code_filename": "mobile_ui_005_model2.jsx",
+          "model_name": "Model 2"
+        }
+      }
+    ],
+    "meta": {
+      "total_images": 5,
+      "total_evaluations": 10,
+      "model_used": "claude-sonnet-4-5-20250929",
+      "images_dir": "./dataset/mobile_ui_design_images",
+      "code_dir": "./output"
+    }
+  }
+}
